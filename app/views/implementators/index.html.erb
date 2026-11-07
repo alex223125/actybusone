@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Implementators</h1>
+
+<div id="implementators">
+  <% @implementators.each do |implementator| %>
+    <%= render implementator %>
+    <p>
+      <%= link_to "Show this implementator", implementator %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New implementator", new_implementator_path %>

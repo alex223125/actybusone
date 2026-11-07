@@ -1,0 +1,17 @@
+<div id="<%= dom_id algorithm %>">
+  <p>
+    <strong>Title:</strong>
+    <%= algorithm.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= algorithm.description %>
+  </p>
+
+  <p>
+    <strong>Quest:</strong>
+    <%= algorithm.quest.try(:name) %>
+  </p>
+
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Member positions</h1>
+
+<div id="member_positions">
+  <% @member_positions.each do |member_position| %>
+    <%= render "quest_planner/member_positions/member_position", :member_position => member_position %>
+    <p>
+      <%= link_to "Show this member position", quests_planner_member_position_path(member_position) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New member position", new_quests_planner_member_position_path %>

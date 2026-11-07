@@ -1,0 +1,12 @@
+<div id="<%= dom_id direction %>">
+  <p>
+    <strong>Name:</strong>
+    <%= direction.name %>
+  </p>
+
+  <p>
+    <strong>Direction category:</strong>
+    <%= link_to direction.direction_category.name, direction_direction_categories_path(direction.direction_category) %>
+  </p>
+
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tool positions</h1>
+
+<div id="tool_positions">
+  <% @tool_positions.each do |tool_position| %>
+    <%= render "quest_planner/tool_positions/tool_position", :tool_position => tool_position %>
+    <p>
+      <%= link_to "Show this tool position", quests_planner_tool_position_path(tool_position) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tool position", new_quests_planner_tool_position_path %>

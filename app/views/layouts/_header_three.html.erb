@@ -1,0 +1,385 @@
+
+<!--return back after  internal user_administration page-->
+<%# if user_signed_in? %>
+
+
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+
+<!--    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">-->
+<!--      <span class="sr-only">Toggle navigation</span>-->
+<!--      <span class="icon-bar"></span>-->
+<!--      <span class="icon-bar"></span>-->
+<!--      <span class="icon-bar"></span>-->
+<!--    </button>-->
+
+
+
+    <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Main page
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "1) Main page", main_page_path, class: "dropdown-item" %></li>
+          <li><a class="dropdown-item" href="#">Action</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Directions
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "1) Directions", direction_directions_path, class: "dropdown-item" %></li>
+          <li><%= link_to "2) Categories of direction", direction_direction_categories_path, class: "dropdown-item" %></li>
+          <li><a class="dropdown-item" href="#">Action</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Common entitites
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "1) Articles", articles_path, class: "dropdown-item" %></li>
+          <li><a class="dropdown-item" href="#">Action</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Why page
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "1) Articles", articles_path, class: "dropdown-item" %></li>
+          <li><%= link_to "2) Pins content categoris", pin_content_categories_path, class: "dropdown-item" %></li>
+          <li><%= link_to "3) Pins", pins_path, class: "dropdown-item" %></li>
+          <li><%= link_to "4) New Pin", new_pin_path, class: "dropdown-item" %></li>
+          <li><a class="dropdown-item" href="#">Pins search page</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Landing for custom direction
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "Activities", activities_path, class: "dropdown-item" %></li>
+          <li><%= link_to "Activities search page=", activities_path, class: "dropdown-item" %></li>
+          <li><%= link_to "Organisations", activities_path, class: "dropdown-item" %></li>
+          <li><a class="dropdown-item" href="#">Action</a></li>
+
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Quests
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "1.1 Difficulty", quest_difficulties_path, class: "dropdown-item" %></li>
+          <li><%= link_to "1.2 Regularities", quest_regularities_path, class: "dropdown-item" %></li>
+
+          <li><%= link_to "2.1 Quests", quest_quests_path, class: "dropdown-item" %></li>
+          <li><%= link_to "2.2 Pinteres like list of quest", quest_quests_path, class: "dropdown-item" %></li>
+          <li><%= link_to "2.3 Steps", quest_steps_path, class: "dropdown-item" %></li>
+          <li><%= link_to "2.4 Algorithms", quest_algorithms_path, class: "dropdown-item" %></li>
+          <li><%= link_to "2.5 Quest landing page", landing_pages_path, class: "dropdown-item" %></li>
+          <li><a class="dropdown-item" href="#">Quests search page =</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Quest planner
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "1)Step 1.Quest planner", quest_planner_planners_path, class: "dropdown-item" %></li>
+          <li><%= link_to "2)Step 2.Member positions", quest_planner_member_positions_path, class: "dropdown-item" %></li>
+          <li><%= link_to "3)Step 3.Tool positions", quest_planner_tool_positions_path, class: "dropdown-item" %></li>
+          <li><%= link_to "4)Step 4.Member invites", quest_planner_member_invites_path, class: "dropdown-item" %></li>
+          <li><a class="dropdown-item" href="#">Quests search page =</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Quest implementator
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+<!--          <li><%#= link_to "1)Step 1. Quests planners", quests_planner_planners_path, class: "dropdown-item" %></li>-->
+          <li><a class="dropdown-item" href="#">1.1) Quest implementator</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+
+    &nbsp;
+
+
+    <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-default navbar-btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+          Pins
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+<!--    <div class="btn-group">-->
+<!--      <a href="#" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-chevron-down"></i> <span class="hidden-xs">Discover</span></a>-->
+<!--      <ul class="dropdown-menu">-->
+<!--        <li><a href="#">Action</a></li>-->
+<!--        <li><a href="#">Another action</a></li>-->
+<!--        <li><a href="#">Something else here</a></li>-->
+<!--        <li class="divider"></li>-->
+<!--        <li><a href="#">Separated link</a></li>-->
+<!--        <li class="divider"></li>-->
+<!--        <li><a href="#">One more separated link</a></li>-->
+<!--      </ul>-->
+<!--    </div>-->
+  </div>
+
+<!--  <div class="navbar-brand" href="#"></div>-->
+
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+    </form>
+
+    &nbsp;
+    <a class="navbar-brand">ActyBus</a>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Home", root_path, class: "nav-link px-2 link-secondary" %></li>
+      <li><a href="#">Link</a></li>
+
+      <li><%= link_to "User administration interface", user_main_page_path, class: "nav-link px-2 link-dark" %></li>
+      <li><%= link_to "Account", edit_user_registration_path, class: "nav-link px-2 link-dark" %></li>
+      <li><%= link_to "Sign out", destroy_user_session_path, { :class => 'nav-link px-2 link-dark', data: { turbo_method: :delete }} %></li>
+        <li class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button<b class="caret"></b>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+
+<!--            <li class="dropdown">-->
+<!--        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+<!--        <ul class="dropdown-menu">-->
+<!--          <li><a href="#">Action</a></li>-->
+<!--          <li><a href="#">Another action</a></li>-->
+<!--          <li><a href="#">Something else here</a></li>-->
+<!--          <li class="divider"></li>-->
+<!--          <li><a href="#">Separated link</a></li>-->
+<!--        </ul>-->
+<!--      </li>-->
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%# else %>
+
+<!--  <nav class="navbar navbar-default" role="navigation">-->
+
+<!--    <div class="navbar-header">-->
+
+
+<!--      <div class="btn-group">-->
+<!--        <div class="dropdown">-->
+<!--          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Directions-->
+<!--          </button>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--            <li><%#= link_to "1) Directions", direction_directions_path, class: "dropdown-item" %></li>-->
+<!--            <li><%#= link_to "2) Categories of direction", direction_direction_categories_path, class: "dropdown-item" %></li>-->
+<!--            <li><a class="dropdown-item" href="#">Direction search page</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--      <div class="btn-group">-->
+<!--        <div class="dropdown">-->
+<!--          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Common entitites-->
+<!--          </button>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--            <li><%#= link_to "1) Articles", articles_path, class: "dropdown-item" %></li>-->
+<!--            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="btn-group">-->
+<!--        <div class="dropdown">-->
+<!--          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Why page-->
+<!--          </button>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--            <li><%#= link_to "1) Articles", articles_path, class: "dropdown-item" %></li>-->
+<!--            <li><%#= link_to "2) Pins", pins_path, class: "dropdown-item" %></li>-->
+<!--            <li><%#= link_to "3) New Pin", new_pin_path, class: "dropdown-item" %></li>-->
+<!--            <li><a class="dropdown-item" href="#">Pins search page</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="btn-group">-->
+<!--        <div class="dropdown">-->
+<!--          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Landing for custom direction-->
+<!--          </button>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--            <li><%#= link_to "Activities", activities_path, class: "dropdown-item" %></li>-->
+<!--            <li><%#= link_to "Activities search page=", activities_path, class: "dropdown-item" %></li>-->
+<!--            <li><%#= link_to "Organisations", activities_path, class: "dropdown-item" %></li>-->
+<!--            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--      <div class="btn-group">-->
+<!--        <div class="dropdown">-->
+<!--          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Quests-->
+<!--          </button>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--            <li><%#= link_to "Quests", quest_quests_path, class: "dropdown-item" %></li>-->
+<!--            <li><a class="dropdown-item" href="#">Quests search page =</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--      &nbsp;-->
+
+
+<!--      <div class="btn-group">-->
+<!--        <div class="dropdown">-->
+<!--          <button class="btn btn-default navbar-btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Pins-->
+<!--          </button>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+
+<!--    </div>-->
+
+
+<!--    <div class="collapse navbar-collapse" id="navbar-collapse-1">-->
+
+<!--      <form class="navbar-form navbar-left" role="search">-->
+<!--        <div class="form-group">-->
+<!--          <input type="text" class="form-control" placeholder="Search">-->
+<!--        </div>-->
+<!--        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>-->
+<!--      </form>-->
+
+<!--      &nbsp;-->
+<!--      <a class="navbar-brand">ActyBus</a>-->
+
+<!--      <ul class="nav navbar-nav navbar-right">-->
+<!--        <li><%#= link_to "Home", root_path, class: "nav-link px-2 link-secondary" %></li>-->
+<!--        <li><a href="#">Link</a></li>-->
+<!--        <li><%#= link_to 'Login', new_user_session_path, class: "btn btn-outline-primary me-2" %></li>-->
+<!--        <li><%#= link_to 'Sign up', new_user_registration_path, class: "btn" %></li>-->
+<!--        <li class="dropdown">-->
+<!--          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Dropdown button<b class="caret"></b>-->
+<!--          </button>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--          </ul>-->
+<!--        </li>-->
+
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </nav>-->
+
+
+
+<%# end %>

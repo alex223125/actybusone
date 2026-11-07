@@ -1,0 +1,119 @@
+
+<%#= form_tag dogs_path, method: :get do %>
+  <%#= label_tag  "Search for a doggo by name:" %>
+  <%#= text_field_tag :search, params[:search] %>
+  <%#= submit_tag ‘Search’, name: nil %>
+<%# end %>
+
+
+<!-- This script got from frontendfreecode.com -->
+<div class="search_main_page">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-12">
+        <%= form_tag main_page_path, method: :get do %>
+          <%#= label_tag  "Search for a doggo by name:" %>
+          <%#= text_field_tag :search, params[:search] %>
+          <%#= text_field_tag(:input_second), placeholder: 'Search for snippets' %>
+<!--          <input type="text" class="form-control" placeholder="Search for snippets" />-->
+
+          <div class="input-group" id="adv-search">
+            <%= text_field_tag 'direction[search_term]', nil, class: 'form-control', placeholder: 'Search for snippets' %>
+            <!--          <input type="text" class="form-control" placeholder="Search for snippets" />-->
+            <div class="input-group-btn">
+              <div class="btn-group" role="group">
+                <div class="dropdown dropdown-lg">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                  <div class="dropdown-menu dropdown-menu-right" role="menu">
+
+                    <form class="form-horizontal" role="form">
+
+                      <div class="form-group">
+                        <label for="filter">Filter by activity</label>
+                        <%= select_tag 'direction[direction_ids]',
+                                       options_from_collection_for_select(Directions::Direction.all, :id, :name),
+                                       multiple: true, class: 'form-control' %>
+                      </div>
+
+
+                      <div class="form-group">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <label for="filter">Filter by content category</label>
+                        <%= select_tag 'direction[pin_content_category_id]',
+                                       options_from_collection_for_select(PinContentCategory.all, :id, :title), class: 'form-control' %>
+                      </div>
+
+                      <div class="form-group">
+                        <br>
+                        <br>
+                        <label for="filter">Filter by (not in use)</label>
+                        <select class="form-control">
+                          <option value="0" selected>All Snippets</option>
+                          <option value="1">Featured</option>
+                          <option value="2">Most popular</option>
+                          <option value="3">Top rated</option>
+                          <option value="4">Most commented</option>
+                        </select>
+                      </div>
+
+
+                      <div class="form-group">
+                        <br>
+                        <br>
+                        <label for="contain">Author (not in use)</label>
+                        <input class="form-control" type="text" />
+                      </div>
+                      <div class="form-group">
+                        <br>
+                        <br>
+                        <label for="contain">Contains the words (not in use)</label>
+                        <input class="form-control" type="text" />
+                      </div>
+                      <br>
+                      <br>
+                      <%= submit_tag("Submit", :class => "btn btn-primary glyphicon glyphicon-search", 'aria-hidden' => true ) %>
+<!--                      <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>-->
+                    </form>
+
+                  </div>
+                </div>
+                <%#= submit_tag("Submit", :class => "btn btn-primary glyphicon glyphicon-search", 'aria-hidden' => true ) %>
+                </span>
+                <%#= submit_tag 'Search', name: nil, class="btn btn-primary" %>
+<!--                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>-->
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% if @pins.present? %>
+  <div class="pins_page">
+    <div class="transitions-enabled" id="pins">
+      <% @pins.each do |pin| %>
+        <div class="box panel panel-default">
+          <%= link_to (image_tag pin.image.url), pin %>
+          <div class="panel-body">
+            <h2>
+              <%= link_to pin.title, pin %>
+            </h2>
+            <p>
+              <%= pin.description.truncate(100, separator: ' ') %>
+            </p>
+            <p class="user"></p>
+            Submitted by
+            <%= pin.user.email %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

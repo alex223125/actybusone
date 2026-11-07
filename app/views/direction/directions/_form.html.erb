@@ -1,0 +1,40 @@
+ <%= form_with(model: direction, url: direction_directions_path, method: :post) do |form| %>
+    <% if direction.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(direction.errors.count, "error") %> prohibited this direction from being saved:</h2>
+
+        <ul>
+          <% direction.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+   Group activity or not:
+   <div class="form-group">
+     <%= form.select :is_group, options_for_select([true, false]), class: 'form-control' %>
+   </div>
+
+    <!--  select parent activity-->
+    Parent direction:
+    <div class="form-group">
+      <%#= form.label :parent_id, style: "display: block" %>
+      <%= form.collection_select :parent_id, Directions::Direction.order(:name),:id,:name, include_blank: true %>
+    </div>
+    <br>
+    Name:
+    <div class="form-group">
+      <%#= form.label :name, style: "display: block" %>
+      <%= form.text_field :name %>
+    </div>
+
+   <div>
+     <%= form.label :direction_category, style: "display: block" %>
+     <%= form.select :direction_category_id, options_for_select(@categories.collect { |cat| [cat.name, cat.id]}), :include_blank => false %>
+   </div>
+
+    <div class="btn btn-primary">>
+      <%= form.submit %>
+    </div>
+  <% end %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @regularity %>
+
+<div>
+  <%= link_to "Edit this regularity", edit_regularity_path(@regularity) %> |
+  <%= link_to "Back to regularities", regularities_path %>
+
+  <%= button_to "Destroy this regularity", @regularity, method: :delete %>
+</div>

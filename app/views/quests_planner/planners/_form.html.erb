@@ -1,0 +1,54 @@
+
+<%= simple_form_for(@planner, url: quests_planner_planners_path) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+  </div>
+
+  <br>
+  <div class="form-inputs">
+    <%= f.label "Select quest:" %>
+    <%= f.collection_select(:quest_id, Quests::Quest.all, :id, :name, {:prompt => true}, {class: "newdropdown-menu"}) %>
+  </div>
+
+  <br>
+  <div class="form-inputs">
+    <%= f.label "Select if quest will be implemented individually:" %> <br />
+    <%= f.check_box :is_individual_planned %> <br />
+  </div>
+
+
+<!--  <br>-->
+<!--  <div class="form-inputs">-->
+<!--    <%#= f.label "Members poisitions selection:" %> <br />-->
+    <%#= f.collection_select(:member_position_ids, QuestsPlanners::MemberPosition.all, :id, :title, {:prompt => "Please Select a Sector"}, {:multiple => true}) %>
+
+    <%#= f.collection_select(:member_position_ids, QuestsPlanners::MemberPosition.all, :id, :title, {:multiple => true}, size: QuestsPlanners::MemberPosition.all.length) %>
+    <%#= f.collection_select :member_position_ids,QuestsPlanners::MemberPosition.all, :id, :title, :prompt => "Category", :multiple => true %>
+    <%#= f.collection_select(:member_position_ids, QuestsPlanners::MemberPosition.all, :id, :title, {:prompt => true}, {class: "newdropdown-menu", id: "newdropdown"}) %>
+<!--  </div>-->
+
+
+  <br>
+  <div class="form-inputs">
+    <%= f.label "Select if no tool required:" %> <br />
+    <%= f.check_box :is_no_tools_required %> <br />
+  </div>
+
+<!--  <br>-->
+<!--  <div class="form-inputs">-->
+<!--    <%#= f.label "Tools positions selection:" %> <br />-->
+    <%#= f.collection_select(:tool_position_ids, QuestsPlanners::ToolPosition.all, :id, :title, {:prompt => "Please Select a Sector"}, {:multiple => true}) %>
+
+    <%#= f.collection_select(:member_position_ids, QuestsPlanners::MemberPosition.all, :id, :title, {:multiple => true}, size: QuestsPlanners::MemberPosition.all.length) %>
+    <%#= f.collection_select :member_position_ids,QuestsPlanners::MemberPosition.all, :id, :title, :prompt => "Category", :multiple => true %>
+    <%#= f.collection_select(:member_position_ids, QuestsPlanners::MemberPosition.all, :id, :title, {:prompt => true}, {class: "newdropdown-menu", id: "newdropdown"}) %>
+<!--  </div>-->
+
+  <br>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

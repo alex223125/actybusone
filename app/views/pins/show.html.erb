@@ -1,0 +1,54 @@
+<div class="row" id="pin_show">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading pin_image">
+        <%= image_tag @pin.image.url(:medium) %>
+      </div>
+      <div class="panel-body">
+        <h1>
+          <%= @pin.title %>
+        </h1>
+        <p class="description">
+          <%= @pin.description %>
+        </p>
+      </div>
+      <div class="panel-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="user"></p>
+            Submitted by
+            <%= @pin.user.email %>
+          </div>
+
+          <p>
+            <strong>Content Category:</strong>
+            <%= link_to @pin.content_category.title, pin_content_category_path(@pin.content_category) %>
+          </p>
+
+          <p>
+            <strong>Directions: </strong>
+            <% @pin.directions.each do |direction| %>
+                <br>
+                <%= link_to direction.name, direction_direction_path(direction) %>
+            <% end %>
+
+          </p>
+
+          <div class="col-md-6">
+            <div class="btn-group pull-right">
+              <%= link_to like_pin_url(@pin), data: { turbo_method: :put }, class: "btn btn-default" do %>
+                <span class="glyphicon glyphicon-heart">
+                  <%= @pin.get_upvotes.size %>
+                </span>
+              <% end %>
+              <% if user_signed_in? %>
+                <%= link_to "Edit", edit_pin_path, class: "btn btn-default" %>
+                <%= link_to "Delete", pin_path, data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "btn btn-default" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

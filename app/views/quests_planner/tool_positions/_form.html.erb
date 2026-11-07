@@ -1,0 +1,18 @@
+
+<%= simple_form_for(@tool_position, url: quests_planner_tool_positions_path) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+
+  Select planner:
+  <%= f.collection_select(:planner_id, QuestsPlanners::Planner.all, :id, :title, {:prompt => true}, {class: "newdropdown-menu", id: "newdropdown"}) %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

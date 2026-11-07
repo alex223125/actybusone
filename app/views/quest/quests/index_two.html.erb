@@ -1,0 +1,18 @@
+<div class="transitions-enabled" id="pins">
+  <% @quests.each do |pin| %>
+    <div class="box panel panel-default">
+      <%= link_to (image_tag quest.image.url), quest %>
+      <div class="panel-body">
+        <h2>
+          <%= link_to quest.name, quest %>
+        </h2>
+        <p>
+          <%= quest.description.truncate(100, separator: ' ') %>
+        </p>
+        <p class="user"></p>
+        Submitted by
+        <%= quest.user.email %>
+      </div>
+    </div>
+  <% end %>
+</div>

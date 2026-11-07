@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render "quest_planner/member_invites/member_invite", :member_invite => @member_invite %>
+
+<div>
+  <%= link_to "Edit this member invite", edit_quests_planner_member_invite_path(@member_invite) %> |
+  <%= link_to "Back to member invites", quests_planner_member_invites_path %>
+
+  <%= button_to "Destroy this member invite", quests_planner_member_invite_path(@member_invite), method: :delete %>
+</div>

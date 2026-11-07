@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @implementator %>
+
+<div>
+  <%= link_to "Edit this implementator", edit_implementator_path(@implementator) %> |
+  <%= link_to "Back to implementators", implementators_path %>
+
+  <%= button_to "Destroy this implementator", @implementator, method: :delete %>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Steps</h1>
+
+<div id="steps">
+  <% @steps.each do |step| %>
+    <%= render "quest/steps/step", :step => step %>
+    <p>
+      <%= link_to "Show this step", quest_step_path(step) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New step", new_quest_step_path %>

@@ -1,0 +1,18 @@
+<div id="<%= dom_id direction_category %>">
+  <p>
+    <strong>Name:</strong>
+    <%= direction_category.name %>
+  </p>
+
+  Tree format:
+  <h2>
+    <strong>Category:</strong>
+    <%= direction_category.name %>
+  </h2>
+  <% direction_category.directions.each do |direction| %>
+    <p>
+      <%= direction.name %> | <%= link_to "View direction", direction %>
+    </p>
+  <% end %>
+
+</div>

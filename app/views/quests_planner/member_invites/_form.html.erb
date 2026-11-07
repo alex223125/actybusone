@@ -1,0 +1,36 @@
+
+<%= simple_form_for(@member_invite, url: quests_planner_member_invites_path) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+<!--  <div class="form-inputs">-->
+    <%#= f.association :user_administration %>
+<!--  </div>-->
+
+  <div class="form-inputs">
+    <%= f.label "Select planners:" %> <br />
+    <%= f.collection_select(:planner_id, QuestsPlanners::Planner.all, :id, :title, {:prompt => true}, {class: "newdropdown-menu", id: "newdropdown"}) %>
+  </div>
+  <br />
+
+  <div class="form-inputs">
+    <%= f.label "Select user_administration:" %> <br />
+    <%= f.collection_select(:user_id, User.all, :id, :email, {:prompt => true}, {class: "newdropdown-menu", id: "newdropdown"}) %>
+  </div>
+  <br />
+
+  <div class="form-inputs">
+    <%= f.label "Select amount of days invite will be active:" %> <br />
+    <%#= select_tag :county, options_for_select(User::COUNTY_OPTIONS) %>
+    <%= select_tag 'quests_planners_member_invite[amount_of_days]', options_for_select(1..7), class: 'form-control' %>
+  </div>
+  <br />
+
+
+
+  Send invite to a member:
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+<% end %>

@@ -1,0 +1,17 @@
+<div id="<%= dom_id planner %>">
+  <p>
+    <strong>Title:</strong>
+    <%= planner.title %>
+  </p>
+
+  <p>
+    <strong>Picked quest:</strong>
+    <%= planner.quest.try(:name) %>
+  </p>
+
+  <p>
+    <strong>Picked quest id:</strong>
+    <%= planner.quest.try(:id) %>
+  </p>
+
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @direction_category %>
+
+<div>
+  <%= link_to "Edit this direction category", edit_direction_category_path(@direction_category) %> |
+  <%= link_to "Back to direction categories", direction_categories_path %>
+
+  <%= button_to "Destroy this direction category", @direction_category, method: :delete %>
+</div>

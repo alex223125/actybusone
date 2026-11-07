@@ -1,0 +1,2 @@
+module PinContentCategoriesHelper
+end

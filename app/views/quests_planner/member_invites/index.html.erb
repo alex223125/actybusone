@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Member invites</h1>
+
+<div id="member_invites">
+  <% @member_invites.each do |member_invite| %>
+    <%= render "quest_planner/member_invites/member_invite", :member_invite => member_invite %>
+    <p>
+      <%= link_to "Show this member invite", quests_planner_member_invite_path(member_invite) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New member invite", new_quests_planner_member_invite_path %>

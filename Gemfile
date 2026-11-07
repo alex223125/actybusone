@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.0"
+ruby "2.7.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
@@ -20,6 +20,8 @@ gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
+
+
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
@@ -40,7 +42,41 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
+gem 'jquery-rails'
+
+# gem 'webpacker'
+gem 'webpacker', '~> 5.0'
+
+gem 'simple_form', '~> 4.0', '>= 4.0.1'
+gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'haml', '~> 5.0', '>= 5.0.4'
+
+# gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+# gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'sass-rails', '>= 3.2'
+gem 'bootstrap', '~> 5.2.1'
+
+gem "paperclip", "~> 6.0.0"
+gem 'masonry-rails', '~> 0.2.4'
+gem 'coffee-rails', '~> 5.0'
+gem 'acts_as_votable', '~> 0.11.1'
+
 gem "bootsnap", require: false
+
+gem 'closure_tree'
+
+gem 'pry-rails'
+gem 'pry-stack_explorer'
+gem 'pry-byebug'
+
+
+gem 'acts_as_list'
+
+gem 'sidekiq', '~> 4.1', '>= 4.1.2'
+gem 'redis'
+gem 'whenever', '~> 0.9.4'
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"

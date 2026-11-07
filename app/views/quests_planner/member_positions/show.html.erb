@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render "quest_planner/member_positions/member_position", :member_position => @member_position %>
+
+<div>
+  <%= link_to "Edit this member position", edit_quests_planner_member_position_path(@member_position) %> |
+  <%= link_to "Back to member positions", quests_planner_member_positions_path %>
+
+  <%= button_to "Destroy this member position", quests_planner_member_position_path(@member_position), method: :delete %>
+</div>

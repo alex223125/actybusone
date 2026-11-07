@@ -1,0 +1,18 @@
+<div id="<%= dom_id pin_content_category %>">
+
+  <p>
+    <strong>Title:</strong>
+    <%= pin_content_category.title %>
+  </p>
+
+  <h2>
+    <strong>Category:</strong>
+    <%= pin_content_category.title %>
+  </h2>
+  <% pin_content_category.pins.each do |pin| %>
+    <p>
+      <%= pin.title %> | <%= link_to "View pin", pin %>
+    </p>
+  <% end %>
+
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @pin_content_category %>
+
+<div>
+  <%= link_to "Edit this pin content category", edit_pin_content_category_path(@pin_content_category) %> |
+  <%= link_to "Back to pin content categories", pin_content_categories_path %>
+
+  <%= button_to "Destroy this pin content category", @pin_content_category, method: :delete %>
+</div>

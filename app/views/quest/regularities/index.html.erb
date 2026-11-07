@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Regularities</h1>
+
+<div id="regularities">
+  <% @regularities.each do |regularity| %>
+    <%= render regularity %>
+    <p>
+      <%= link_to "Show this regularity", regularity %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New regularity", new_regularity_path %>

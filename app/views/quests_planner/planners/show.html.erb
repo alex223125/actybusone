@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render "quest_planner/planners/planners", :planner => @planner %>
+
+<div>
+  <%= link_to "Edit this planners", edit_quests_planner_planner_path(@planner) %> |
+  <%= link_to "Back to planners", quests_planner_planners_path %>
+
+  <%= button_to "Destroy this planners", quests_planner_planner_path(@planner), method: :delete %>
+</div>

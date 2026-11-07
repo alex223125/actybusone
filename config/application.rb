@@ -11,6 +11,21 @@ module Actybus
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.autoload_paths += [config.root.join('app')]
+
+    config.active_job.queue_adapter = :sidekiq
+
+    config.sass.load_paths << Rails.root.join("vendor","assets","stylesheets");
+
+    # config.autoload_paths += %W(#{config.root}/services)
+    # config.autoload_paths += Dir[Rails.root.join('app', 'services')]
+    # config.eager_load_paths << Rails.root.join('app', 'services')
+    # config.autoload_paths += [config.root.join('app')]
+    # Dir[Rails.root.join('app', 'services', '**', '*.rb')].each { |file| require file }
+
+    # Spring.watch "app/services/**"
+
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

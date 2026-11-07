@@ -1,0 +1,2 @@
+module MemberInvitesHelper
+end

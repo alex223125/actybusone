@@ -1,0 +1,22 @@
+<div id="<%= dom_id tool_position %>">
+  <p>
+    <strong>Title:</strong>
+    <%= tool_position.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= tool_position.description %>
+  </p>
+
+  <p>
+    <strong>Planner:</strong>
+    <%= tool_position.planner.title %>
+  </p>
+
+  <p>
+    <strong>User who filled tool position</strong>
+    <%= tool_position.user.try(:email) %>
+  </p>
+
+</div>

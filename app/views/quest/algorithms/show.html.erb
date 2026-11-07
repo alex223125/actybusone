@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render "quest/algorithms/algorithm", :algorithm => @algorithm %>
+
+<div>
+  <%= link_to "Edit this algorithm", edit_quest_algorithm_path(@algorithm) %> |
+  <%= link_to "Back to algorithms", quest_algorithms_path %>
+
+  <%= button_to "Destroy this algorithm", quest_algorithms_path(@algorithm), method: :delete %>
+</div>

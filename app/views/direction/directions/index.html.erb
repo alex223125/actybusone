@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Directions</h1>
+
+<div id="directions">
+  <% @directions.each do |direction| %>
+    <%= render "direction/directions/direction", :direction => direction %>
+    <p>
+      <%= link_to "Show this direction", direction_direction_path(direction) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New direction", new_direction_direction_path %>

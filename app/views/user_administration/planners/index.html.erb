@@ -1,0 +1,46 @@
+<div class="user_administration_page_content">
+
+  <p id="notice"><%= notice %></p>
+  <h1>Quest planners</h1>
+
+  <table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+    <tr>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Position</th>
+      <th>Open</th>
+      <th>Field four</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @planners.each do |planner| %>
+      <tr>
+
+      <tr>
+        <td>
+          <%= planner.title %>
+        </td>
+        <td>
+          <span class="badge badge-success rounded-pill d-inline">Active</span>
+        </td>
+        <td>Senior</td>
+        <td>
+          <button type="button" class="btn btn-link btn-sm btn-rounded">
+            Edit
+          </button>
+        </td>
+        <td>
+          <%= link_to "Show", quest_planner_planner_path(planner), class: "btn btn-link btn-sm btn-rounded" %>
+        </td>
+      </tr>
+
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+<br>
+
+<%#= link_to 'New Exchange Operation', new_exchange_operation_path %>

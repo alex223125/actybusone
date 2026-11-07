@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Actybus</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload', debug: true  %>
+  <%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "header", media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_importmap_tags %>
+
+</head>
+
+
+
+
+<body>
+
+  <div class='dashboard'>
+    <div class='dashboard-app'>
+      <header class='dashboard-toolbar'><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a></header>
+      <div class='dashboard-content user_administration_layout'>
+
+        <%#= render "user_administration/layouts/header"  %>
+        <%= render "user_administration/layouts/left_side_menu"  %>
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <%= yield %>
+
+
+  <!--      <div class='container'>-->
+  <!--        <div class='card'>-->
+  <!--          <div class='card-header'>-->
+  <!--            <h1>Welcome back Jim</h1>-->
+  <!--          </div>-->
+  <!--          <div class='card-body'>-->
+  <!--            <p>Your account type is: Administrator</p>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

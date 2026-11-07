@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Planners</h1>
+
+<div id="planners">
+  <% @planners.each do |planner| %>
+    <%= render "quest_planner/planners/planner", :planner => planner %>
+    <p>
+      <%= link_to "Show this planners", quests_planner_planner_path(planner) %>
+    </p>
+    ------
+  <% end %>
+</div>
+
+<%= link_to "New planners", new_quests_planner_planner_path %>

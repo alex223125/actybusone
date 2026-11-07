@@ -1,0 +1,22 @@
+<div id="<%= dom_id member_invite %>">
+  <p>
+    <strong>User:</strong>
+    <%= member_invite.user_id %>
+  </p>
+
+  <p>
+    <strong>Planner:</strong>
+    <%= member_invite.planner.try(:title) %>
+  </p>
+
+  <p>
+    <strong>Is active:</strong>
+    <%= member_invite.is_active %>
+  </p>
+
+  <p>
+    <strong>Expiration date:</strong>
+    <%= member_invite.expiration_date %>
+  </p>
+
+</div>

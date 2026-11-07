@@ -1,6 +1,8 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  # Verifies that versions and hashed value of the package contents in the project's package.json
+  config.webpacker.check_yarn_integrity = true
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -10,6 +12,7 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  config.after_eager_load_paths = Dir[Rails.root.join('app', 'services', '**/')]
 
   # Show full error reports.
   config.consider_all_requests_local = true
@@ -39,6 +42,9 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  # devise settings
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
@@ -57,7 +63,26 @@ Rails.application.configure do
   config.active_record.verbose_query_logs = true
 
   # Suppress logger output for asset requests.
+  # config.assets.quiet = true
+
+  config.assets.debug = true
   config.assets.quiet = true
+  config.assets.compile = true
+
+
+
+  # # ========================================
+  # #   Your Yarn packages are out of date!
+  # # Please run `yarn install` to update.
+  # #   ========================================
+  # #
+  # #
+  # #   To disable this check, please add `config.webpacker.check_yarn_integrity = false`
+  # # to your Rails development config file (config/environments/development.rb).
+  # #
+  #   config.webpacker.check_yarn_integrity = false
+
+
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

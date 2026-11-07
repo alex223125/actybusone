@@ -1,0 +1,70 @@
+
+<% if user_signed_in? %>
+
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><%= link_to "Home", root_path, class: "nav-link px-2 link-secondary" %></li>
+      <!--    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>-->
+      <li><%= link_to "1) Directions", directions_path, class: "nav-link px-2 link-dark" %></li>
+      <!--    <li><a href="#" class="nav-link px-2 link-dark">1) Directions</a></li>-->
+      <li><%= link_to "2) Categories of direction", direction_categories_path, class: "nav-link px-2 link-dark" %></li>
+      <!--    <li><a href="#" class="nav-link px-2 link-dark">2) Categories of direction</a></li>-->
+      <li><%= link_to "3) Articles", articles_path, class: "nav-link px-2 link-dark" %></li>
+      <li><%= link_to "4) Pins", pins_path, class: "nav-link px-2 link-dark" %></li>
+      <li><%= link_to "5) New Pin", new_pin_path, class: "nav-link px-2 link-dark" %></li>
+      <li><a href="#" class="nav-link px-2 link-dark">Why page</a></li>
+      <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+
+      <li><%= link_to "Account", edit_user_registration_path, class: "nav-link px-2 link-dark" %></li>
+      <!--    <li><%#= link_to "Sign out", destroy_user_session_path, { :class => 'nav-link px-2 link-dark', :method => :delete} %>-->
+      <li><%= link_to "Sign out", destroy_user_session_path, { :class => 'nav-link px-2 link-dark', data: { turbo_method: :delete }} %></li>
+      <!--    <li><%#=link_to "Sign out", :controller => "Users::SessionsController", :action => "destroy", :method => :delete, :class => 'nav-link px-2 link-dark' %></li>-->
+      <!--    <li><%#= link_to "Sign out", destroy_user_session_path, method: "delete", class: "nav-link px-2 link-dark"%>-->
+      <!--    <li><%#= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link px-2 link-dark" %></li>-->
+
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <!--    <button type="button" class="btn btn-outline-primary me-2">Login</button>-->
+      <%#= button_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+      <!--    <p><%#= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %></p>-->
+      <!--    <button type="button" class="btn btn-primary">Sign-up</button>-->
+    </div>
+  </div>
+
+<% else %>
+
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><%= link_to "Home", root_path, class: "nav-link px-2 link-secondary" %></li>
+      <!--    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>-->
+      <li><%= link_to "1) Directions", directions_path, class: "nav-link px-2 link-dark" %></li>
+      <!--    <li><a href="#" class="nav-link px-2 link-dark">1) Directions</a></li>-->
+      <li><%= link_to "2) Categories of direction", direction_categories_path, class: "nav-link px-2 link-dark" %></li>
+      <!--    <li><a href="#" class="nav-link px-2 link-dark">2) Categories of direction</a></li>-->
+      <li><%= link_to "3) Articles", articles_path, class: "nav-link px-2 link-dark" %></li>
+      <li><%= link_to "4) Pins", pins_path, class: "nav-link px-2 link-dark" %></li>
+      <li><a href="#" class="nav-link px-2 link-dark">Why page</a></li>
+      <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <!--      <button type="button" class="btn btn-outline-primary me-2">Login</button>-->
+      <p><%= link_to 'Login', new_user_session_path, class: "btn btn-outline-primary me-2" %></p>
+
+      <%#= button_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+      <p><%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %></p>
+      <!--    <button type="button" class="btn btn-primary">Sign-up</button>-->
+    </div>
+  </div>
+
+
+<% end %>

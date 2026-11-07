@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render "quest_planner/tool_positions/tool_position", :tool_position => @tool_position %>
+
+
+<div>
+  <%= link_to "Edit this tool position", edit_quests_planner_tool_position_path(@tool_position) %> |
+  <%= link_to "Back to tool positions", quests_planner_tool_positions_path %>
+
+  <%= button_to "Destroy this tool position", quests_planner_tool_position_path(@tool_position), method: :delete %>
+</div>

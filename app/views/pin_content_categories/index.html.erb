@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Pin content categories</h1>
+
+<div id="pin_content_categories">
+  <% @pin_content_categories.each do |pin_content_category| %>
+    <%= render pin_content_category %>
+    <p>
+      <%= link_to "Show this pin content category", pin_content_category %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New pin content category", new_pin_content_category_path %>
